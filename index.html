@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto Bootstrap</title>
+        <link rel="stylesheet" href="./Lib/bootstrap.min.css">
+        <style>
+            html{
+                overflow-x: hidden;
+            }
+
+            body{
+                background-color: #CCC;
+            }
+
+            .carousel-item{
+            height: 340px;
+            width: 100%;
+            }
+
+            .navbar-nav .nav-link.active{
+                color: #FFF;
+            }
+    
+            .nav-link{
+                text-align: center;
+            }
+    
+            section{
+                height: 100vh;
+                padding: 80px;
+            }
+    
+            header{
+                position: sticky;
+                top: 0;
+                left: 0;
+                background-color: #FFF;
+                
+            }
+
+            .col img{
+                height: 250px;
+                width: 250px;
+                margin-top: 50px;
+            }
+
+            @media screen and (max-width: 640px) {
+            .carousel-item{
+            height: 240px;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="cabecalho">
+            <div class="navbar navbar-expand-lg">
+                <div class="container">
+                    <h1>Título do site</h1>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                        <ul class="nav navbar-nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#inicio">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#produtos">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#promocoes">Promoções</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div id="carousel-ex" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="2000" class="carousel-item active">
+                        <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg"/>
+                        <div class="carousel-caption">
+                            <h5>imagem 1</h5>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2000" class="carousel-item">
+                        <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg"/>
+                        <div class="carousel-caption">
+                            <h5>imagem 2</h5>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2000" class="carousel-item">
+                        <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg"/>
+                        <div class="carousel-caption">
+                            <h5>imagem 3</h5>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="carousel-control-prev" data-bs-target="#carousel-ex" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button type="button" class="carousel-control-next" data-bs-target="#carousel-ex" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button class="active" type="button" data-bs-target="#carousel-ex" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <section>
+                <h3>Inicío da seção 1</h3>
+                <div class="row">
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                </div>
+            </section>
+            <section>   
+                <h3>Inicío da seção 2</h3>
+                <div class="row">
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Inicío da seção 3</h3>
+                <div class="row">
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
+                        <h4>Texto da imagem</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="./Lib/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
