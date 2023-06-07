@@ -15,8 +15,8 @@
                 background-color: #CCC;
             }
 
-            .carousel-item{
-            height: 340px;
+            .carousel-item img{
+            height: 300px;
             width: 100%;
             }
 
@@ -37,20 +37,46 @@
                 position: sticky;
                 top: 0;
                 left: 0;
+                z-index: 2;
                 background-color: #FFF;
                 
             }
 
-            .col img{
-                height: 250px;
-                width: 250px;
-                margin-top: 50px;
+            .col-4 img{
+                max-height: 400px;
+            }
+
+            .card-img-overlay, .carousel-item{
+            background-color: rgba(0, 0, 0, 0.5);
             }
 
             @media screen and (max-width: 640px) {
-            .carousel-item{
-            height: 240px;
+                .carousel-item img{
+                    height: 240px;
+                }
+
+                .col-4{
+                    width: 100%;
+                    margin-bottom: 24px;
+                }
+
+                #secao_2, #secao_3{
+                    margin-top: 450px;
+                }
             }
+            @media screen and (min-width: 641px) and (max-width: 1023px) {
+                .carousel-item img{
+                    height: 240px;
+                }
+
+                .col-4{
+                    width: 50%;
+                    margin-bottom: 24px;
+                }
+
+                #secao_2, #secao_3{
+                    margin-top: 50px;
+                }
             }
         </style>
     </head>
@@ -58,23 +84,20 @@
         <header id="cabecalho">
             <div class="navbar navbar-expand-lg">
                 <div class="container">
-                    <h1>Título do site</h1>
+                    <h1>Gatos</h1>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <nav class="collapse navbar-collapse justify-content-end" id="menu">
                         <ul class="nav navbar-nav nav-pills">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#inicio">Início</a>
+                                <a class="nav-link active" href="#secao_1">Seção 1</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#produtos">Produtos</a>
+                                <a class="nav-link" href="#secao_2">Seção 2</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#promocoes">Promoções</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contato">Contato</a>
+                                <a class="nav-link" href="#secao_3">Seção 3</a>
                             </li>
                         </ul>
                     </nav>
@@ -87,19 +110,19 @@
                     <div data-bs-interval="2000" class="carousel-item active">
                         <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg"/>
                         <div class="carousel-caption">
-                            <h5>imagem 1</h5>
+                            <h5>Ninho de gatos</h5>
                         </div>
                     </div>
                     <div data-bs-interval="2000" class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg"/>
+                        <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg"/>
                         <div class="carousel-caption">
-                            <h5>imagem 2</h5>
+                            <h5>Gato silvestre</h5>
                         </div>
                     </div>
                     <div data-bs-interval="2000" class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg"/>
+                        <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg"/>
                         <div class="carousel-caption">
-                            <h5>imagem 3</h5>
+                            <h5>Gato sentado</h5>
                         </div>
                     </div>
                 </div>
@@ -115,57 +138,130 @@
                     <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
                 </div>
             </div>
-            <section>
-                <h3>Inicío da seção 1</h3>
-                <div class="row">
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
+            <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+                <section id="secao_1">
+                    <h3>Inicío da seção 1</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2023/05/23/15/26/bengal-cat-8012976_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato olhando pra cima</h4>
+                                    <p class="card-text">Conheça o gato olhando pra cima.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2013/05/30/18/21/cat-114782_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato lambendo a pata</h4>
+                                    <p class="card-text">Conheça o gato lambendo a pata.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2020/04/27/09/21/cat-5098930_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato marcando presença</h4>
+                                    <p class="card-text">Conheça o gato marcando presença.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                </section>
+                <section id="secao_2">   
+                    <h3>Inicío da seção 2</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2021/09/28/13/14/cat-6664412_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato com sono</h4>
+                                    <p class="card-text">Conheça o gato com sono.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2015/11/23/07/31/scottish-fold-1057829_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato com medo</h4>
+                                    <p class="card-text">Conheça o gato com medo.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2021/12/17/06/18/cat-6875746_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato preguiçoso</h4>
+                                    <p class="card-text">Conheça o gato preguiçoso.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
+                </section>
+                <section id="secao_3">
+                    <h3>Inicío da seção 3</h3>
+                    <div class="row">
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2016/12/30/12/16/cat-1940487_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato se equilibrando</h4>
+                                    <p class="card-text">Conheça o gato se equilibrando.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2020/11/22/17/28/cat-5767334_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato com frio</h4>
+                                    <p class="card-text">Conheça o gato com frio.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-4">
+                            <article class="card text-bg-dark">
+                                <img src="https://cdn.pixabay.com/photo/2016/05/05/13/10/young-1373879_1280.jpg"/>
+                                <div class="card-img-overlay">
+                                    <h4>Gato fofoqueiro</h4>
+                                    <p class="card-text">Conheça o gato fofoqueiro.</p>
+                                </div>
+                                <div class="card-footer">
+                                    Postado em <time>07/06/2023</time>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                </div>
-            </section>
-            <section>   
-                <h3>Inicío da seção 2</h3>
-                <div class="row">
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h3>Inicío da seção 3</h3>
-                <div class="row">
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                    <div class="col">
-                        <img src="https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954"/>
-                        <h4>Texto da imagem</h4>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
         <script src="./Lib/bootstrap.bundle.min.js"></script>
     </body>
